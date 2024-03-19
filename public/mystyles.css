@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family:  Geneva, Verdana, sans-serif;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.grid-item {
+    padding: 2%; /* Adjust padding proportionally */
+    border: thin solid red;
+    margin: 1%; /* Adjust margin proportionally */
+    flex-basis: 30%; /* This adjusts basis for smaller screens */
+}
+
+
+.header {
+    padding: 40px;
+    background-color: crimson;
+}
+
+.header .title {
+    margin-left: 10px;
+    font-size: larger;
+    color: white;
+}
+
+@media only screen and (max-width: 1458px) {
+    .grid-item {
+        padding: 20px 60px;
+    }
+}
+
+@media only screen and (max-width: 1252px) {
+    .grid-item {
+        padding: 20px 50px;
+    }
+}
+
+@media only screen and (max-width: 1076px) {
+    .grid-item {
+        padding: 20px 40px;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .grid-item {
+        flex-basis: 30%;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    .grid-item {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (min-width: 636px) {
+    .grid-item {
+        flex-grow: 1; /* This allows items to grow equally */
+        flex-shrink: 1; /* This allows items to shrink equally */
+        flex-basis: 20%; /* Set the initial size of each item to one-fifth or what I chooseto that of the container width */
+        margin: 10px; 
+    }
+}
+
